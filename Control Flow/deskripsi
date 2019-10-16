@@ -1,0 +1,76 @@
+CONTROL FLOW
+*normal flow :
+    dimana ada lebih dari 1 statement, maka statement tersebut akan di eksekusi dari atas ke bawah dan dari kiri ke kanan
+*control flow artinya dimana kita dapat mengatur alur kendali yang akan dieksekusi pada statement kita untuk melakukan hal tersebut kita membutuhkan : pengulangan dan pengkondisian
+
+pengulangan :
+*didalam CONTROL FLOW pengulangan pada javascript ada 3 yaitu :
+for, while, do while
+-loop / iteration
+infinite loop / looping forever
+bisa dihentikan oleh user atau program
+
+-dengan user contoh :
+var u = true;
+while(u)
+
+{
+    console.log('hai');
+    u = confirm('lagi?');
+}
+*cara mbaca kita memiliki var u yang bernilai true ,lalu while u sebagai true ,pertama akan melakukan log pada console yang berisikan 'hai',lalu akan melalui confirm , didalam confirm ada 2 pilihan yaitu oke dan cancel, jika oke bernilai true dan cancel bernilai false, artinya jika kita memilih oke maka akan mengulangi statement dari atas,jika kita memilih cancel maka pengulangan tersebut akan berhenti.
+
+-dihentikan dengan program : kita bisa mengatur berapa banyak loop yang akan dilakukan
+-rumusnya 
+nilai awal
+while(kondisi terminasi)
+{
+    statement
+    increment atau decrement
+}
+contoh :
+var u = 1;
+while(u <3)
+{
+    console.log('hai');
+    u++; /u = u + 1;
+}
+*cara mbaca kita memiliki variabel u yang bernilai 1, lalu while ,ketika nilai u lebih kecil dari 3 maka akan melakukan statement dibawah, dan nilai dari var u akan bertambah 1 dengan menggunakan u++(setiap melakukan 1 kali eksekusi maka nilai akan bertambah 1), maka statement akan diulangi sampai tidak lebih kecil dari 3.
+
+contoh lagi 
+*bagaimana jika membuat string yang tiap eksekusi bernilai beda?
+kita ingin menampilkan log pada console 'hai 1x' 'hai 2x' jikakita menuliskan satu" maka akan pusing...iya kalau sedikit ,jika 1000 kalimat..bakal susah sekali..ini solusinya
+var u = 1;
+while(u <=5)
+{
+    console.log('hai ' + u + 'x');
+    u++
+}
+*kita bisa memanfaatkan increment atau penambahan nilai pada var u yang selalu ditambahkan 1
+mbacanya ketika u kurang dari sama dengan 5 maka akan menampilkan pada console log
+'hai' sebagai string ,lalu nilai dari u,yang diikuti dengan string 'x'.
+
+
+contoh for :
+alert('mulai');
+for(var u = 1; u < 2; u++){
+alert('hallo');
+}
+alert('terimakasih');
+*cara mbaca , kita akan menampilkan alert 'mulai' setelah itu kita memiliki variabel u yang bernilai 1, dan jika nilai u lebih kecil dari 2 maka akan mengeksekusi statement dibawahnya akan terus diulangi sampai nilai u tidak lagi lebih kecil dari 2 maka akan berhenti dan melanjutkan ke statement alert 'terimakasih'.
+
+pengkondisian :
+*program kita bisa memilih untuk mengeksekusi statement yang berbeda berdasarkan kondisi yang di berikan
+*didalam CONTROL FLOW pengkondisian pada javascript ada 
+if, if else, if else if else, switch
+contoh if else :
+var angka = prompt('masukan nama :');
+if(angka % 2 === 0)
+{
+    alert( angka + ' adalah bilangan GENAP');
+}else {
+    alert( angka + ' adalah bilangan GANJIL');
+}
+*cara mbaca jika bilangan angka dibagi 2 sisa baginya 0 maka akan masuk pada if,
+jika sisa baginya tidak sama dengan 0 maka akan masuk pada else.
+
